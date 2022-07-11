@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- FONTS -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- ICON -->
+    <link rel="stylesheet" href="./fontawesome-free-6.1.1-web/css/all.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <title>vtc.com</title>
+</head>
+<body>
+    
+    <div class="container-grille">
+        <header>
+            <div >
+                <span class="burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+
+            <h1>Bienvenue à bord</h1>
+
+            <p class="loca">Location de voiture 24h/24 et 7j/7</p>
+
+            <div class="nav">
+                <div class="localisation">
+                    <select name="selection" id="selection"  class="item">
+                        <option value="Adresse">Adresse de départ</option>
+                        <option value="Lyon">Lyon</option>
+                        <option value="Marseille">Marseille</option>
+                        <option value="Montpellier">Montpellier</option>
+                        <option value="Paris">Paris</option>
+                    </select>
+    
+                    <input placeholder="Début de location" class="item"><button class="bouton2" type="submit"><i class="fa-solid fa-calendar-days bouton2-icon"></i></button>
+    
+                    <input placeholder="Fin de location" class="item"><button  class="bouton2" type="submit"><i class="fa-solid fa-calendar-days bouton2-icon"></i></button>
+        
+                </div>
+                <div class="bouton">
+                Valider ma recherche
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="main-container">
+                <div class="first-row">
+                    <p class="result"><span>7</span> résultats</p>
+                    <select name="prix" id="choixPrix">
+                        <option value="Adresse">Prix croissant</option>
+                        <option value="Marseille">Prix décroissant</option>    
+                    </select>
+                </div>
+        
+                <div class="box">
+                    <div class="carte">
+                        <div class="precedent">◄</div>
+                        <img id="monImg" src="./img/peugeot1.png" alt="peugeot 208">
+                        <div class="suivant">►</div>
+                    </div>
+
+                    <div class="description">
+                        <h2>Peugeot 208</h2>
+                        <p class="sorte">Diesel, 5 portes, GPS, AutoRadio, Forfait100KM (0,5/km supémentaires)</p>
+                        <p class="sorte">999 €- Agence de Paris</p>
+                        <button>Réserver et Payer</button>
+                    </div>
+                </div>
+                <hr>
+                <div class="box">
+                    <div class="carte">
+                        <div class="precedent">◄</div>
+                        <img id="monImg2" src="./img/ford1.png" alt="ford focus">
+                        <div class="suivant">►</div>
+
+                    </div>
+                    <div>
+                        <h2> Ford Focus</h2>
+                        <p class="sorte">Diesel, 5 portes, GPS, AutoRadio, Forfait100KM (0,5/km supémentaires)</p>
+                        <p class="sorte">999 €</p>
+                        <button>Réserver et Payer</button>
+                    </div>
+                </div>
+                <hr>
+                <div class="box">
+                    <div class="carte">
+                        <div class="precedent">◄</div>
+                        <img id="monImg3" src="./img/audi1.png" alt="audi a1">
+                        <div class="suivant">►</div>
+                    </div>
+                    <div>
+                        <h2> Audi A1</h2>
+                        <p class="sorte">Diesel, 5 portes, GPS, AutoRadio, Forfait100KM (0,5/km supémentaires)</p>
+                        <p class="sorte">1 100 €- Agence de Paris</p>
+                        <button>Réserver et Payer</button>
+                    </div>
+                </div>
+                <hr>
+                <div class="box">
+                    <div class="carte">
+                        <div class="precedent">◄</div>
+                        <img id="monImg4" src="./img/opel1.png" alt="Opel Mokka">
+                        <div class="suivant">►</div>
+                    </div>
+                    <div>
+                        <h2>Opel Mokka</h2>
+                        <p class="sorte">Diesel, 5 portes, GPS, AutoRadio, Forfait100KM (0,5/km supémentaires)</p>
+                        <p class="sorte">1 150 €- Agence de Paris</p>
+                        <button>Réserver et Payer</button>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </main>
+
+        <!-- <footer>
+
+            FOOTER
+LE FOOTER EST EN COMMENTAIRE PARCE QU'IL EMPECHE LA PAGE DE SE CHARGER SUR LE SITE MAIS SUR MON PC CA FONCTIONNE
+            <div class="infos">
+                <div class="agence">
+                    <img  src="./img/agence.jpg" alt="agence">
+                </div>
+                <div class="adress">
+                    <pre> 
+                        Notre Agence de Paris
+                        300 boulevard de vaugirard, 75015, Paris
+                        Ouvert 7i/7 de 09h à 13h et de 14h à 20h
+                        0149 785133
+                        contact@vtc.com
+                    </pre>
+                </div>
+            </div> -->
+        
+        </footer>
+        
+    </div>
+    
+
+    <script>
+        
+var numero = 0;
+
+setInterval(function() {
+    console.log(numero);
+    
+
+    $('header').css('background-image', 'url(img/background' + numero + '.jpg)'); 
+    numero ++
+
+    if (numero == 4) {
+    numero = 0;
+    }
+    
+}, 2000);
+
+
+var prev = document.getElementsByClassName ('precedent')[0]
+console.log(prev);
+
+var image = document.getElementById('monImg')
+console.log(image);
+
+var next = document.getElementsByClassName('suivant')[0]
+
+var numImg = 1;
+
+next.addEventListener('click',function(){
+
+
+        numImg+=1;
+        if (numImg==3){
+            numImg=1;
+        }
+        
+        console.log(next);
+        console.log(image);
+            console.log(numImg);
+        image.setAttribute ("src",'./img/peugeot' + numImg + '.png');
+            
+        
+    });
+    </script>
+</body>
+</html>
